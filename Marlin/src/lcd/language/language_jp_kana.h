@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -16,7 +16,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
 #pragma once
@@ -26,8 +26,7 @@
  * UTF-8 for Graphical Display
  *
  * LCD Menu Messages
- * See also http://marlinfw.org/docs/development/lcd_language.html
- *
+ * See also https://marlinfw.org/docs/development/lcd_language.html
  */
 
 //#define DISPLAY_CHARSET_ISO10646_KANA
@@ -46,7 +45,6 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_MEDIA_INSERTED                  = _UxGT("メディアガソウニュウサレマシタ");        // "Card inserted"
   PROGMEM Language_Str MSG_MEDIA_REMOVED                   = _UxGT("メディアガアリマセン");               // "Card removed"
   PROGMEM Language_Str MSG_RELEASE_MEDIA                   = _UxGT("メディアノトリダシ");
-  PROGMEM Language_Str MSG_MEDIA_RELEASED                  = _UxGT("メディアガアリマセン");               // "Card removed"
   PROGMEM Language_Str MSG_LCD_ENDSTOPS                    = _UxGT("エンドストップ");                  // "Endstops" // Max length 8 characters
   PROGMEM Language_Str MSG_MAIN                            = _UxGT("メイン");                       // "Main"
   PROGMEM Language_Str MSG_AUTOSTART                       = _UxGT("ジドウカイシ");                   // "Autostart"
@@ -64,40 +62,23 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_SET_HOME_OFFSETS                = _UxGT("キジュンオフセットセッテイ");         // "Set home offsets"
   PROGMEM Language_Str MSG_HOME_OFFSETS_APPLIED            = _UxGT("オフセットガテキヨウサレマシタ");       // "Offsets applied"
   PROGMEM Language_Str MSG_SET_ORIGIN                      = _UxGT("キジュンセット");                 // "Set origin"
-  PROGMEM Language_Str MSG_PREHEAT_1                       = PREHEAT_1_LABEL _UxGT(" ヨネツ");       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_1_H0                    = PREHEAT_1_LABEL _UxGT(" ヨネツ ") LCD_STR_N0;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_1_H1                    = PREHEAT_1_LABEL _UxGT(" ヨネツ ") LCD_STR_N1;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_1_H2                    = PREHEAT_1_LABEL _UxGT(" ヨネツ ") LCD_STR_N2;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_1_H3                    = PREHEAT_1_LABEL _UxGT(" ヨネツ ") LCD_STR_N3;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_1_H4                    = PREHEAT_1_LABEL _UxGT(" ヨネツ ") LCD_STR_N4;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_1_H5                    = PREHEAT_1_LABEL _UxGT(" ヨネツ ") LCD_STR_N5;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_1_END                   = PREHEAT_1_LABEL _UxGT(" ヨネツノズル");  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_1_END_E0                = PREHEAT_1_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N0;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_1_END_E1                = PREHEAT_1_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N1;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_1_END_E2                = PREHEAT_1_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N2;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_1_END_E3                = PREHEAT_1_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N3;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_1_END_E4                = PREHEAT_1_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N4;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_1_END_E5                = PREHEAT_1_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N5;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_1_ALL                   = PREHEAT_1_LABEL _UxGT(" スベテヨネツ");  // " All"
-  PROGMEM Language_Str MSG_PREHEAT_1_BEDONLY               = PREHEAT_1_LABEL _UxGT(" ベッドヨネツ");  // " Bed"
-  PROGMEM Language_Str MSG_PREHEAT_1_SETTINGS              = PREHEAT_1_LABEL _UxGT(" ヨネツセッテイ");  // " conf"
-  PROGMEM Language_Str MSG_PREHEAT_2                       = PREHEAT_2_LABEL _UxGT(" ヨネツ");       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_2_H0                    = PREHEAT_2_LABEL _UxGT(" ヨネツ ") LCD_STR_N0;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_2_H1                    = PREHEAT_2_LABEL _UxGT(" ヨネツ ") LCD_STR_N1;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_2_H2                    = PREHEAT_2_LABEL _UxGT(" ヨネツ ") LCD_STR_N2;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_2_H3                    = PREHEAT_2_LABEL _UxGT(" ヨネツ ") LCD_STR_N3;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_2_H4                    = PREHEAT_2_LABEL _UxGT(" ヨネツ ") LCD_STR_N4;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_2_H5                    = PREHEAT_2_LABEL _UxGT(" ヨネツ ") LCD_STR_N5;       // "Preheat " PREHEAT_1_LABEL
-  PROGMEM Language_Str MSG_PREHEAT_2_END                   = PREHEAT_2_LABEL _UxGT(" ヨネツノズル");  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_2_END_E0                = PREHEAT_2_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N0;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_2_END_E1                = PREHEAT_2_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N1;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_2_END_E2                = PREHEAT_2_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N2;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_2_END_E3                = PREHEAT_2_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N3;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_2_END_E4                = PREHEAT_2_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N4;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_2_END_E5                = PREHEAT_2_LABEL _UxGT(" ヨネツノズル ") LCD_STR_N5;  // " Nozzle"
-  PROGMEM Language_Str MSG_PREHEAT_2_ALL                   = PREHEAT_2_LABEL _UxGT(" スベテヨネツ");  // " All"
-  PROGMEM Language_Str MSG_PREHEAT_2_BEDONLY               = PREHEAT_2_LABEL _UxGT(" ベッドヨネツ");  // " Bed"
-  PROGMEM Language_Str MSG_PREHEAT_2_SETTINGS              = PREHEAT_2_LABEL _UxGT(" ヨネツセッテイ");  // " conf"
+  #if PREHEAT_COUNT
+    PROGMEM Language_Str MSG_PREHEAT_1                     = PREHEAT_1_LABEL _UxGT(" ヨネツ");       // "Preheat " PREHEAT_1_LABEL
+    PROGMEM Language_Str MSG_PREHEAT_1_H                   = PREHEAT_1_LABEL _UxGT(" ヨネツ ~");       // "Preheat " PREHEAT_1_LABEL
+    PROGMEM Language_Str MSG_PREHEAT_1_END                 = PREHEAT_1_LABEL _UxGT(" ヨネツノズル");  // " Nozzle"
+    PROGMEM Language_Str MSG_PREHEAT_1_END_E               = PREHEAT_1_LABEL _UxGT(" ヨネツノズル ~");  // " Nozzle"
+    PROGMEM Language_Str MSG_PREHEAT_1_ALL                 = PREHEAT_1_LABEL _UxGT(" スベテヨネツ");  // " All"
+    PROGMEM Language_Str MSG_PREHEAT_1_BEDONLY             = PREHEAT_1_LABEL _UxGT(" ベッドヨネツ");  // " Bed"
+    PROGMEM Language_Str MSG_PREHEAT_1_SETTINGS            = PREHEAT_1_LABEL _UxGT(" ヨネツセッテイ");  // " conf"
+
+    PROGMEM Language_Str MSG_PREHEAT_M                     = _UxGT("$ ヨネツ");       // "Preheat " PREHEAT_1_LABEL
+    PROGMEM Language_Str MSG_PREHEAT_M_H                   = _UxGT("$ ヨネツ ~");       // "Preheat " PREHEAT_1_LABEL
+    PROGMEM Language_Str MSG_PREHEAT_M_END                 = _UxGT("$ ヨネツノズル");  // " Nozzle"
+    PROGMEM Language_Str MSG_PREHEAT_M_END_E               = _UxGT("$ ヨネツノズル ~");  // " Nozzle"
+    PROGMEM Language_Str MSG_PREHEAT_M_ALL                 = _UxGT("$ スベテヨネツ");  // " All"
+    PROGMEM Language_Str MSG_PREHEAT_M_BEDONLY             = _UxGT("$ ベッドヨネツ");  // " Bed"
+    PROGMEM Language_Str MSG_PREHEAT_M_SETTINGS            = _UxGT("$ ヨネツセッテイ");  // " conf"
+  #endif
   PROGMEM Language_Str MSG_COOLDOWN                        = _UxGT("カネツテイシ");                  // "Cooldown"
   PROGMEM Language_Str MSG_SWITCH_PS_ON                    = _UxGT("デンゲン オン");                 // "Switch power on"
   PROGMEM Language_Str MSG_SWITCH_PS_OFF                   = _UxGT("デンゲン オフ");                 // "Switch power off"
@@ -130,41 +111,8 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_AUTOTEMP                        = _UxGT("ジドウオンドセイギョ");               // "Autotemp"
   PROGMEM Language_Str MSG_LCD_ON                          = _UxGT("オン");                         // "On"
   PROGMEM Language_Str MSG_LCD_OFF                         = _UxGT("オフ");                         // "Off"
-  PROGMEM Language_Str MSG_PID_P                           = _UxGT("PID-P");
-  PROGMEM Language_Str MSG_PID_P_E0                        = _UxGT("PID-P ") LCD_STR_E0;
-  PROGMEM Language_Str MSG_PID_P_E1                        = _UxGT("PID-P ") LCD_STR_E1;
-  PROGMEM Language_Str MSG_PID_P_E2                        = _UxGT("PID-P ") LCD_STR_E2;
-  PROGMEM Language_Str MSG_PID_P_E3                        = _UxGT("PID-P ") LCD_STR_E3;
-  PROGMEM Language_Str MSG_PID_P_E4                        = _UxGT("PID-P ") LCD_STR_E4;
-  PROGMEM Language_Str MSG_PID_P_E5                        = _UxGT("PID-P ") LCD_STR_E5;
-  PROGMEM Language_Str MSG_PID_I                           = _UxGT("PID-I");
-  PROGMEM Language_Str MSG_PID_I_E0                        = _UxGT("PID-I ") LCD_STR_E0;
-  PROGMEM Language_Str MSG_PID_I_E1                        = _UxGT("PID-I ") LCD_STR_E1;
-  PROGMEM Language_Str MSG_PID_I_E2                        = _UxGT("PID-I ") LCD_STR_E2;
-  PROGMEM Language_Str MSG_PID_I_E3                        = _UxGT("PID-I ") LCD_STR_E3;
-  PROGMEM Language_Str MSG_PID_I_E4                        = _UxGT("PID-I ") LCD_STR_E4;
-  PROGMEM Language_Str MSG_PID_I_E5                        = _UxGT("PID-I ") LCD_STR_E5;
-  PROGMEM Language_Str MSG_PID_D                           = _UxGT("PID-D");
-  PROGMEM Language_Str MSG_PID_D_E0                        = _UxGT("PID-D ") LCD_STR_E0;
-  PROGMEM Language_Str MSG_PID_D_E1                        = _UxGT("PID-D ") LCD_STR_E1;
-  PROGMEM Language_Str MSG_PID_D_E2                        = _UxGT("PID-D ") LCD_STR_E2;
-  PROGMEM Language_Str MSG_PID_D_E3                        = _UxGT("PID-D ") LCD_STR_E3;
-  PROGMEM Language_Str MSG_PID_D_E4                        = _UxGT("PID-D ") LCD_STR_E4;
-  PROGMEM Language_Str MSG_PID_D_E5                        = _UxGT("PID-D ") LCD_STR_E5;
-  PROGMEM Language_Str MSG_PID_C                           = _UxGT("PID-C");
-  PROGMEM Language_Str MSG_PID_C_E0                        = _UxGT("PID-C ") LCD_STR_E0;
-  PROGMEM Language_Str MSG_PID_C_E1                        = _UxGT("PID-C ") LCD_STR_E1;
-  PROGMEM Language_Str MSG_PID_C_E2                        = _UxGT("PID-C ") LCD_STR_E2;
-  PROGMEM Language_Str MSG_PID_C_E3                        = _UxGT("PID-C ") LCD_STR_E3;
-  PROGMEM Language_Str MSG_PID_C_E4                        = _UxGT("PID-C ") LCD_STR_E4;
-  PROGMEM Language_Str MSG_PID_C_E5                        = _UxGT("PID-C ") LCD_STR_E5;
   PROGMEM Language_Str MSG_SELECT                          = _UxGT("センタク");                     // "Select"
-  PROGMEM Language_Str MSG_SELECT_E0                       = _UxGT("センタク ") LCD_STR_E0;
-  PROGMEM Language_Str MSG_SELECT_E1                       = _UxGT("センタク ") LCD_STR_E1;
-  PROGMEM Language_Str MSG_SELECT_E2                       = _UxGT("センタク ") LCD_STR_E2;
-  PROGMEM Language_Str MSG_SELECT_E3                       = _UxGT("センタク ") LCD_STR_E3;
-  PROGMEM Language_Str MSG_SELECT_E4                       = _UxGT("センタク ") LCD_STR_E4;
-  PROGMEM Language_Str MSG_SELECT_E5                       = _UxGT("センタク ") LCD_STR_E5;
+  PROGMEM Language_Str MSG_SELECT_E                        = _UxGT("センタク *");
   PROGMEM Language_Str MSG_ACC                             = _UxGT("カソクド mm/s²");               // "Accel"
   PROGMEM Language_Str MSG_JERK                            = _UxGT("ヤクドウ mm/s");                  // "Jerk"
   PROGMEM Language_Str MSG_VA_JERK                         = _UxGT("ジク ヤクドウ mm/s") LCD_STR_A;             // "Va-jerk"
@@ -178,12 +126,7 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_VMAX_B                          = _UxGT("サイダイオクリソクド ") LCD_STR_A;  // "Vmax B"
   PROGMEM Language_Str MSG_VMAX_C                          = _UxGT("サイダイオクリソクド ") LCD_STR_A;  // "Vmax C"
   PROGMEM Language_Str MSG_VMAX_E                          = _UxGT("サイダイオクリソクド ") LCD_STR_A;  // "Vmax E"
-  PROGMEM Language_Str MSG_VMAX_E0                         = _UxGT("サイダイオクリソクド ") LCD_STR_E0;  // "Vmax E1"
-  PROGMEM Language_Str MSG_VMAX_E1                         = _UxGT("サイダイオクリソクド ") LCD_STR_E1;  // "Vmax E2"
-  PROGMEM Language_Str MSG_VMAX_E2                         = _UxGT("サイダイオクリソクド ") LCD_STR_E2;  // "Vmax E3"
-  PROGMEM Language_Str MSG_VMAX_E3                         = _UxGT("サイダイオクリソクド ") LCD_STR_E3;  // "Vmax E4"
-  PROGMEM Language_Str MSG_VMAX_E4                         = _UxGT("サイダイオクリソクド ") LCD_STR_E4;  // "Vmax E5"
-  PROGMEM Language_Str MSG_VMAX_E5                         = _UxGT("サイダイオクリソクド ") LCD_STR_E5;  // "Vmax E6"
+  PROGMEM Language_Str MSG_VMAX_EN                         = _UxGT("サイダイオクリソクド *");  // "Vmax E1"
   PROGMEM Language_Str MSG_VMIN                            = _UxGT("サイショウオクリソクド");           // "Vmin"
   PROGMEM Language_Str MSG_VTRAV_MIN                       = _UxGT("サイショウイドウソクド");           // "VTrav min"
   PROGMEM Language_Str MSG_ACCELERATION                    = _UxGT("カソクド mm/s²");               // "Accel"
@@ -195,18 +138,13 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_FILAMENT                        = _UxGT("フィラメント");                   // "Filament"
   PROGMEM Language_Str MSG_VOLUMETRIC_ENABLED              = _UxGT("E in mm³");
   PROGMEM Language_Str MSG_FILAMENT_DIAM                   = _UxGT("フィラメントチョッケイ");            // "Fil. Dia."
-  PROGMEM Language_Str MSG_FILAMENT_DIAM_E0                = _UxGT("フィラメントチョッケイ ") LCD_STR_E0;
-  PROGMEM Language_Str MSG_FILAMENT_DIAM_E1                = _UxGT("フィラメントチョッケイ ") LCD_STR_E1;
-  PROGMEM Language_Str MSG_FILAMENT_DIAM_E2                = _UxGT("フィラメントチョッケイ ") LCD_STR_E2;
-  PROGMEM Language_Str MSG_FILAMENT_DIAM_E3                = _UxGT("フィラメントチョッケイ ") LCD_STR_E3;
-  PROGMEM Language_Str MSG_FILAMENT_DIAM_E4                = _UxGT("フィラメントチョッケイ ") LCD_STR_E4;
-  PROGMEM Language_Str MSG_FILAMENT_DIAM_E5                = _UxGT("フィラメントチョッケイ ") LCD_STR_E5;
+  PROGMEM Language_Str MSG_FILAMENT_DIAM_E                 = _UxGT("フィラメントチョッケイ *");
   PROGMEM Language_Str MSG_CONTRAST                        = _UxGT("LCDコントラスト");               // "LCD contrast"
   PROGMEM Language_Str MSG_STORE_EEPROM                    = _UxGT("EEPROMヘホゾン");               // "Store memory"
   PROGMEM Language_Str MSG_LOAD_EEPROM                     = _UxGT("EEPROMカラヨミコミ");               // "Load memory"
-  PROGMEM Language_Str MSG_RESTORE_FAILSAFE                = _UxGT("セッテイリセット");               // "Restore failsafe"
+  PROGMEM Language_Str MSG_RESTORE_DEFAULTS                = _UxGT("セッテイリセット");               // "Restore Defaults"
   PROGMEM Language_Str MSG_REFRESH                         = LCD_STR_REFRESH  _UxGT("リフレッシュ");                  // "Refresh"
-  PROGMEM Language_Str MSG_WATCH                           = _UxGT("ジョウホウガメン");               // "Info screen"
+  PROGMEM Language_Str MSG_INFO_SCREEN                     = _UxGT("ジョウホウガメン");               // "Info screen"
   PROGMEM Language_Str MSG_PREPARE                         = _UxGT("ジュンビセッテイ");               // "Prepare"
   PROGMEM Language_Str MSG_TUNE                            = _UxGT("チョウセイ");                    // "Tune"
   PROGMEM Language_Str MSG_PAUSE_PRINT                     = _UxGT("イチジテイシ");                  // "Pause print"
@@ -222,14 +160,14 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_STOPPED                         = _UxGT("テイシシマシタ");                  // "STOPPED. "
   PROGMEM Language_Str MSG_CONTROL_RETRACT                 = _UxGT("ヒキコミリョウ mm");                // "Retract mm"
   PROGMEM Language_Str MSG_CONTROL_RETRACT_SWAP            = _UxGT("ヒキコミリョウS mm");               // "Swap Re.mm"
-  PROGMEM Language_Str MSG_CONTROL_RETRACTF                = _UxGT("ヒキコミソクド mm/s");             // "Retract  V"
+  PROGMEM Language_Str MSG_CONTROL_RETRACTF                = _UxGT("ヒキコミソクド mm/s");             // "Retract V"
   PROGMEM Language_Str MSG_CONTROL_RETRACT_ZHOP            = _UxGT("ノズルタイヒ mm");                // "Hop mm"
-  PROGMEM Language_Str MSG_CONTROL_RETRACT_RECOVER         = _UxGT("ホショウリョウ mm");               // "UnRet mm"
-  PROGMEM Language_Str MSG_CONTROL_RETRACT_RECOVER_SWAP    = _UxGT("ホショウリョウS mm");              // "S UnRet mm"
-  PROGMEM Language_Str MSG_CONTROL_RETRACT_RECOVERF        = _UxGT("ホショウソクド mm/s");            // "UnRet  V"
-  PROGMEM Language_Str MSG_AUTORETRACT                     = _UxGT("ジドウヒキコミ");                 // "AutoRetr."
+  PROGMEM Language_Str MSG_CONTROL_RETRACT_RECOVER         = _UxGT("ホショウリョウ mm");               // "Unretr. mm"
+  PROGMEM Language_Str MSG_CONTROL_RETRACT_RECOVER_SWAP    = _UxGT("ホショウリョウS mm");              // "S Unretr. mm"
+  PROGMEM Language_Str MSG_CONTROL_RETRACT_RECOVERF        = _UxGT("ホショウソクド mm/s");            // "Unretract V"
+  PROGMEM Language_Str MSG_AUTORETRACT                     = _UxGT("ジドウヒキコミ");                 // "Auto-Retract"
   PROGMEM Language_Str MSG_FILAMENTCHANGE                  = _UxGT("フィラメントコウカン");              // "Change filament"
-  PROGMEM Language_Str MSG_INIT_MEDIA                      = _UxGT("メディアサイヨミコミ");             // "Init. SD card"
+  PROGMEM Language_Str MSG_ATTACH_MEDIA                    = _UxGT("メディアサイヨミコミ");             // "Init. SD card"
   PROGMEM Language_Str MSG_CHANGE_MEDIA                    = _UxGT("メディアコウカン");               // "Change SD card"
   PROGMEM Language_Str MSG_ZPROBE_OUT                      = _UxGT("Zプローブ ベッドガイ");            // "Z probe out. bed"
   PROGMEM Language_Str MSG_BLTOUCH_SELFTEST                = _UxGT("BLTouch ジコシンダン");          // "BLTouch Self-Test"
@@ -245,9 +183,6 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_THERMAL_RUNAWAY                 = _UxGT("ネツボウソウ");                   // "THERMAL RUNAWAY"
   PROGMEM Language_Str MSG_ERR_MAXTEMP                     = _UxGT("エラー:サイコウオンチョウカ");         // "Err: MAXTEMP"
   PROGMEM Language_Str MSG_ERR_MINTEMP                     = _UxGT("エラー:サイテイオンミマン");          // "Err: MINTEMP"
-  PROGMEM Language_Str MSG_ERR_MAXTEMP_BED                 = _UxGT("エラー:ベッド サイコウオンチョウカ");    // "Err: MAXTEMP BED"
-  PROGMEM Language_Str MSG_ERR_MINTEMP_BED                 = _UxGT("エラー:ベッド サイテイオンミマン");     // "Err: MINTEMP BED"
-  PROGMEM Language_Str MSG_ERR_Z_HOMING                    = _UxGT("サキニ XY ヲフッキサセテクダサイ");     // "Home XY first"
   PROGMEM Language_Str MSG_HALTED                          = _UxGT("プリンターハテイシシマシタ");         // "PRINTER HALTED"
   PROGMEM Language_Str MSG_PLEASE_RESET                    = _UxGT("リセットシテクダサイ");              // "Please reset"
   PROGMEM Language_Str MSG_SHORT_DAY                       = _UxGT("d");                          // One character only
@@ -278,7 +213,10 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_INFO_MAX_TEMP                   = _UxGT("セッテイサイコウオン");              // "Max Temp"
   PROGMEM Language_Str MSG_INFO_PSU                        = _UxGT("デンゲンシュベツ");                // "Power Supply"
   PROGMEM Language_Str MSG_DRIVE_STRENGTH                  = _UxGT("モータークドウリョク");              // "Drive Strength"
-  PROGMEM Language_Str MSG_DAC_PERCENT                     = _UxGT("DACシュツリョク %");               // "Driver %"
+  PROGMEM Language_Str MSG_DAC_PERCENT_X                   = _UxGT("X DACシュツリョク %");               // "X Driver %"
+  PROGMEM Language_Str MSG_DAC_PERCENT_Y                   = _UxGT("Y DACシュツリョク %");               // "Y Driver %"
+  PROGMEM Language_Str MSG_DAC_PERCENT_Z                   = _UxGT("Z DACシュツリョク %");               // "Z Driver %"
+  PROGMEM Language_Str MSG_DAC_PERCENT_E                   = _UxGT("E DACシュツリョク %");               // "E Driver %"
   PROGMEM Language_Str MSG_DAC_EEPROM_WRITE                = _UxGT("EEPROMヘホゾン");               // "Store memory"
   PROGMEM Language_Str MSG_FILAMENT_CHANGE_HEADER_PAUSE    = _UxGT("イチジテイシ");
   PROGMEM Language_Str MSG_FILAMENT_CHANGE_OPTION_RESUME   = _UxGT("プリントサイカイ");                // "Resume print"
@@ -288,7 +226,7 @@ namespace Language_jp_kana {
   PROGMEM Language_Str MSG_FILAMENT_CHANGE_LOAD            = _UxGT(MSG_2_LINE("フィラメントソウテンチュウ", "シバラクオマチクダサイ"));   // "Wait for filament load"
   PROGMEM Language_Str MSG_FILAMENT_CHANGE_RESUME          = _UxGT(MSG_2_LINE("プリントヲサイカイシマス", "シバラクオマチクダサイ"));   // "Wait for print to resume"
 
-  PROGMEM Language_Str MSG_EXPECTED_PRINTER                = _UxGT("マチガッタプリンター");               // "Wrong printer"
+  PROGMEM Language_Str MSG_KILL_EXPECTED_PRINTER           = _UxGT("マチガッタプリンター");               // "Wrong printer"
 
   PROGMEM Language_Str MSG_CONFIGURATION                   = _UxGT("セッテイカンリ");
   PROGMEM Language_Str MSG_ADVANCED_SETTINGS               = _UxGT("ショウサイセッテイ");

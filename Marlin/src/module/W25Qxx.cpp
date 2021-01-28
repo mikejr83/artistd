@@ -17,7 +17,7 @@
  *
  */
 #include "../inc/MarlinConfig.h"
-#include "../Marlin.h"
+#include "../MarlinCore.h"
 #if ENABLED(SPI_FLASH)
 #include <SPI.h>
 
@@ -43,7 +43,7 @@
 ext_FLASH W25QXX;
 
 void ext_FLASH::init(uint8_t spiRate){
-	
+
 	  OUT_WRITE(SPI_FLASH_CS_PIN, HIGH);
 
 	  /**
@@ -70,7 +70,7 @@ void ext_FLASH::init(uint8_t spiRate){
 	  SPI.begin();
 	  SPI.setClockDivider(clock);
 	  SPI.setBitOrder(MSBFIRST);
-	  SPI.setDataMode(SPI_MODE0);	
+	  SPI.setDataMode(SPI_MODE0);
 }
 
 /**
@@ -128,17 +128,17 @@ void ext_FLASH::spi_flash_SendBlock(uint8_t token, const uint8_t* buf) {
 
 uint16_t ext_FLASH::W25QXX_ReadID(void)
 {
-	uint16_t Temp = 0;	  
-	W25QXX_CS_L;				    
-	spi_flash_Send(0x90);//���Ͷ�ȡID����	    
-	spi_flash_Send(0x00); 	    
-	spi_flash_Send(0x00); 	    
-	spi_flash_Send(0x00); 	 			   
-	Temp|=spi_flash_Rec()<<8;  
-	Temp|=spi_flash_Rec();	 
-	W25QXX_CS_H;				    
+	uint16_t Temp = 0;
+	W25QXX_CS_L;
+	spi_flash_Send(0x90);//���Ͷ�ȡID����
+	spi_flash_Send(0x00);
+	spi_flash_Send(0x00);
+	spi_flash_Send(0x00);
+	Temp|=spi_flash_Rec()<<8;
+	Temp|=spi_flash_Rec();
+	W25QXX_CS_H;
 	return Temp;
-}  
+}
 void ext_FLASH::SPI_FLASH_WriteEnable(void)
 {
   /* Select the FLASH: Chip Select low */
@@ -236,7 +236,7 @@ void ext_FLASH::SPI_FLASH_BulkErase(void)
   /* Bulk Erase */
   /* Select the FLASH: Chip Select low */
   W25QXX_CS_L;
-  
+
   /* Send Bulk Erase instruction  */
   spi_flash_Send(W25X_ChipErase);
   /* Deselect the FLASH: Chip Select high */
@@ -402,7 +402,7 @@ void ext_FLASH::SPI_FLASH_BufferRead(uint8_t* pBuffer, uint32_t ReadAddr, uint16
   /* Send ReadAddr low nibble address byte to read from */
   spi_flash_Send(ReadAddr & 0xFF);
 
-  if(NumByteToRead<33)	
+  if(NumByteToRead<33)
   {
     while (NumByteToRead--) /* while there is data to be read */
     {
@@ -414,7 +414,7 @@ void ext_FLASH::SPI_FLASH_BufferRead(uint8_t* pBuffer, uint32_t ReadAddr, uint16
   }
   else
   {
-      spi_flash_Read(pBuffer, NumByteToRead); 
+      spi_flash_Read(pBuffer, NumByteToRead);
    }
   W25QXX_CS_H;
 }
