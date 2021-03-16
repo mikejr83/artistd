@@ -622,8 +622,8 @@
 #if ENABLED(DUAL_X_CARRIAGE)
   #define X1_MIN_POS X_MIN_POS     // Set to X_MIN_POS
   #define X1_MAX_POS X_BED_SIZE-5  // Set a maximum so the first X-carriage can't hit the parked second X-carriage
-  #define X2_MIN_POS    5          // Set a minimum to ensure the  second X-carriage can't hit the parked first X-carriage  /JGMaker 5mm 
-  #define X2_MAX_POS   370         // Set this to the distance between toolheads when both heads are homed  手工测 284   增加上层向左偏移，减小向右  新机实测两喷头间距离为435mm
+  #define X2_MIN_POS     3         // Set a minimum to ensure the  second X-carriage can't hit the parked first X-carriage  CAD测量 62mm
+  #define X2_MAX_POS   370 //371.4 //372.8 //435.3 //336       // Set this to the distance between toolheads when both heads are homed  手工测 284   增加上层向左偏移，减小向右  新机实测两喷头间距离为435mm
   #define X2_HOME_DIR    1         // Set to 1. The second X-carriage always homes to the maximum endstop position
   #define X2_HOME_POS X2_MAX_POS   // Default X2 home position. Set to X2_MAX_POS.
                       // However: In this mode the HOTEND_OFFSET_X value for the second extruder provides a software
@@ -1118,7 +1118,7 @@
 #endif // HAS_LCD_MENU
 
 // Scroll a longer status message into view
-//#define STATUS_MESSAGE_SCROLLING
+#define STATUS_MESSAGE_SCROLLING
 
 // On the Info Screen, display XY with one decimal place when possible
 //#define LCD_DECIMAL_SMALL_XY
@@ -1180,7 +1180,7 @@
 
   //#define MENU_ADDAUTOSTART               // Add a menu option to run auto#.g files
 
-  #define EVENT_GCODE_SD_ABORT "G28X"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27") TwinkieXLII
+  #define EVENT_GCODE_SD_ABORT "G28X\nG0 Y" STRINGIFY(Y_BED_SIZE) " F1500\nM84 X Y E"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27") TwinkieXLII
 
   #if ENABLED(PRINTER_EVENT_LEDS)
     #define PE_LEDS_COMPLETED_TIME  (30*60) // (seconds) Time to keep the LED "done" color before restoring normal illumination
@@ -1253,7 +1253,7 @@
   #define LONG_FILENAME_HOST_SUPPORT
 
   // Enable this option to scroll long filenames in the SD card menu
-  //#define SCROLL_LONG_FILENAMES
+  #define SCROLL_LONG_FILENAMES
 
   // Leave the heaters on after Stop Print (not recommended!)
   //#define SD_ABORT_NO_COOLDOWN
@@ -1609,8 +1609,8 @@
   //#define BABYSTEP_ALWAYS_AVAILABLE       // Allow babystepping at all times (not just during movement).
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
   #define BABYSTEP_INVERT_Z false           // Change if Z babysteps should go the other way
-  #define BABYSTEP_MILLIMETER_UNITS         // Specify BABYSTEP_MULTIPLICATOR_(XY|Z) in mm instead of micro-steps
-  #define BABYSTEP_MULTIPLICATOR_Z  .04     // (steps or mm) Steps or millimeter distance for each Z babystep
+  //#define BABYSTEP_MILLIMETER_UNITS         // Specify BABYSTEP_MULTIPLICATOR_(XY|Z) in mm instead of micro-steps
+  #define BABYSTEP_MULTIPLICATOR_Z  10     // (steps or mm) Steps or millimeter distance for each Z babystep
   #define BABYSTEP_MULTIPLICATOR_XY 1       // (steps or mm) Steps or millimeter distance for each XY babystep
 
   #define DOUBLECLICK_FOR_Z_BABYSTEPPING  // Double-click on the Status Screen for Z Babystepping.
@@ -2016,7 +2016,7 @@
   //#define TOOLCHANGE_ZRAISE_BEFORE_RETRACT  // Apply raise before swap retraction (if enabled)
   #define TOOLCHANGE_NO_RETURN              // Never return to previous position on tool-change
   #if ENABLED(TOOLCHANGE_NO_RETURN)
-    //#define EVENT_GCODE_AFTER_TOOLCHANGE "G12X"   // Extra G-code to run after tool-change
+    #define EVENT_GCODE_AFTER_TOOLCHANGE "G12"   // Extra G-code to run after tool-change
   #endif
 
   /**

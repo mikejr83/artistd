@@ -22,19 +22,23 @@
 #pragma once
 
 ////////////////////////////////////
-// JGMaker Artist-D by TwinkieXII //
+// JGMaker Artist-D by TwinkieXII and mikejr83 //
 ////////////////////////////////////
 
 /**
  * Marlin release version identifier //BASED on 2.0.7.2
  */
+<<<<<<< HEAD
 #define SHORT_BUILD_VERSION "2021.4.1"
+=======
+#define SHORT_BUILD_VERSION "2.0.7.2"
+>>>>>>> Applying my custom changes
 
 /**
  * Verbose version identifier which should contain a reference to the location
  * from where the binary was downloaded or the source code was compiled.
  */
-#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION "JGMaker"
+#define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION "MikeCustom-JGMaker-2.0.7.2"
 
 /**
  * The STRING_DISTRIBUTION_DATE represents when the binary file was built,
@@ -54,7 +58,7 @@
  * has a distinct Github fork— the Source Code URL should just be the main
  * Marlin repository.
  */
-#define SOURCE_CODE_URL "https://github.com/JGMaker3dofficial/artistd"
+#define SOURCE_CODE_URL "https://github.com/mikejr83/artistd"
 
 /**
  * Default generic printer UUID.
