@@ -28,11 +28,7 @@
 /**
  * Marlin release version identifier //BASED on 2.0.7.2
  */
-<<<<<<< HEAD
-#define SHORT_BUILD_VERSION "2021.4.1"
-=======
 #define SHORT_BUILD_VERSION "2.0.7.2"
->>>>>>> Applying my custom changes
 
 /**
  * Verbose version identifier which should contain a reference to the location
