@@ -18,4 +18,3 @@ Do you want to ask a question? Are you looking for support? Please don't post he
 **Actual behavior:** [What actually happens]
 
 #### Additional Information
-
